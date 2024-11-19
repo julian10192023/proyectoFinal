@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" maxWidth="400" maxHeight="600"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.full_marketplace.viewcontroller.RegistroController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Registro de Usuario" style="-fx-font-size: 24px;"/>
+
+    <GridPane vgap="10" hgap="10">
+        <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Apellidos:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtApellidos" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Cédula:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtCedula" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Dirección:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDireccion" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Usuario:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtUsername" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Contraseña:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="txtPassword" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <CheckBox fx:id="chkIsAdmin" text="Registrar como Administrador"
+                  GridPane.rowIndex="6" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Registrarse" onAction="#onRegistrar"/>
+        <Button text="Cancelar" onAction="#onCancelar"/>
+    </HBox>
+
+    <Label fx:id="lblError" textFill="RED" wrapText="true"/>
+</VBox>

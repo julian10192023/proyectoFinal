@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" maxWidth="350" maxHeight="400"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.full_marketplace.viewcontroller.LoginController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="MarketPlace Social" style="-fx-font-size: 24px;"/>
+
+    <GridPane vgap="10" hgap="10">
+        <Label text="Usuario:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtUsername" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Contraseña:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="txtPassword" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Iniciar Sesión" onAction="#onLogin"/>
+        <Button text="Registrarse" onAction="#onRegistro"/>
+    </HBox>
+</VBox>

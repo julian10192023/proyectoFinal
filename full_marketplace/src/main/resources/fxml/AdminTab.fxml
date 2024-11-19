@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.full_marketplace.viewcontroller.AdminTabController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Tipo de Reporte:"/>
+        <ComboBox fx:id="cboTipoReporte"/>
+
+        <Label text="Fecha Inicio:"/>
+        <DatePicker fx:id="dpFechaInicio"/>
+
+        <Label text="Fecha Fin:"/>
+        <DatePicker fx:id="dpFechaFin"/>
+
+        <Button text="Generar" onAction="#onGenerarReporte"/>
+    </HBox>
+
+    <TextArea fx:id="txtEstadisticas" VBox.vgrow="ALWAYS"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Exportar" onAction="#onExportar"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="root" spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.full_marketplace.viewcontroller.VendedorTabController">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <SplitPane dividerPositions="0.3, 0.7" VBox.vgrow="ALWAYS">
+        <!-- Panel de Contactos -->
+        <VBox spacing="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+
+            <Label text="Contactos" style="-fx-font-weight: bold"/>
+            <ListView fx:id="lstContactos" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="btnAgregarContacto" text="Agregar Contacto"
+                    onAction="#onAgregarContacto" maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- Panel del Muro -->
+        <VBox spacing="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+
+            <Label text="Muro" style="-fx-font-weight: bold"/>
+            <TextArea fx:id="txtMuro" VBox.vgrow="ALWAYS"
+                      editable="false" wrapText="true"/>
+        </VBox>
+
+        <!-- Panel de Productos -->
+        <VBox spacing="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+
+            <Label text="Productos" style="-fx-font-weight: bold"/>
+            <ListView fx:id="lstProductos" VBox.vgrow="ALWAYS"/>
+
+            <!-- HBox para los botones -->
+            <HBox spacing="5">
+                <Button fx:id="btnPublicar" text="Publicar Producto"
+                        onAction="#onPublicarProducto" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Button fx:id="btnMeGusta" text="Me gusta ♡"
+                        onAction="#onDarMeGusta" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Button fx:id="btnComentar" text="Comentar"
+                        onAction="#onComentar" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            </HBox>
+        </VBox>
+    </SplitPane>
+</VBox>
